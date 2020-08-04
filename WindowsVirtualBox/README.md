@@ -142,3 +142,14 @@ In your ssh config you can tell VSCode's SSH Remote to automatically forward por
 Normally ports are forwarded only when they are accessed such as by clicking a link in the terminal of a newly running server.
 
 ![](images/LocalForward.png)
+
+## Manjaro specific
+
+### To switch between starting up in CLI/GUI mode
+
+`sudo systemctl set-default multi-user.target # for CLI`
+and
+`sudo systemctl set-default graphical.target # for GUI`
+
+### To enable SSH (VERY IMPORTANT! - Or VS Code Remote:SSH won't function)
+`sudo systemctl enable sshd.service`
